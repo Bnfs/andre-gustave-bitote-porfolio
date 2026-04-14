@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>André — Portfolio</title>
+  <meta name="description" content="Portfolio d'André — Développeur Full Stack passionné par le code propre et le design élégant.">
+
+  <!-- Google Fonts : Syne (titres géométriques) + Space Grotesk (corps lisible) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================================================
+       NAVIGATION
+  ================================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="#hero" class="nav__logo">
+        <span class="nav__logo-bracket">&lt;</span>André<span class="nav__logo-bracket">/&gt;</span>
+      </a>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about"      class="nav__link">À propos</a></li>
+        <li><a href="#skills"     class="nav__link">Compétences</a></li>
+        <li><a href="#experience" class="nav__link">Expériences</a></li>
+        <li><a href="#education"  class="nav__link">Formation</a></li>
+        <li><a href="#projects"   class="nav__link">Projets</a></li>
+        <li><a href="#contact"    class="nav__link">Contact</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <button class="nav__theme-toggle" id="themeToggle" aria-label="Changer de thème">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="nav__burger" id="navBurger" aria-label="Menu mobile">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ================================================
+       HERO
+  ================================================ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__orb hero__orb--1"></div>
+      <div class="hero__orb hero__orb--2"></div>
+      <div class="hero__orb hero__orb--3"></div>
+    </div>
+
+    <div class="hero__container">
+      <div class="hero__content">
+        <p class="hero__greeting reveal">Bonjour, je suis</p>
+
+        <!-- ✏️ REMPLACEZ [Votre Nom] par votre vrai nom -->
+        <h1 class="hero__name reveal">André <span class="gradient-text">[Votre Nom]</span></h1>
+
+        <div class="hero__role reveal">
+          <span>Je suis </span>
+          <span class="hero__typed" id="typed"></span><span class="hero__cursor" aria-hidden="true">|</span>
+        </div>
+
+        <!-- ✏️ REMPLACEZ cette accroche -->
+        <p class="hero__tagline reveal">
+          Je conçois des expériences numériques mémorables — du code propre, du design qui parle, des produits qui durent.
+        </p>
+
+        <div class="hero__actions reveal">
+          <!-- ✏️ Remplacez href par le chemin de votre CV PDF -->
+          <a href="assets/cv.pdf" class="btn btn--primary" download>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Télécharger CV
+          </a>
+          <a href="#contact" class="btn btn--outline">Me contacter</a>
+          <!-- ✏️ REMPLACEZ l'URL LinkedIn -->
+          <a href="https://linkedin.com/in/votre-profil" target="_blank" rel="noopener" class="btn btn--ghost">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+        </div>
+
+        <!-- ✏️ REMPLACEZ les valeurs data-target -->
+        <div class="hero__stats reveal">
+          <div class="hero__stat">
+            <span class="hero__stat-num" data-target="5">0</span>
+            <span class="hero__stat-label">ans d'expérience</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-num" data-target="30">0</span>
+            <span class="hero__stat-label">projets livrés</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-num" data-target="15">0</span>
+            <span class="hero__stat-label">clients satisfaits</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__visual reveal">
+        <div class="hero__avatar-wrapper">
+          <div class="hero__avatar" id="heroAvatar">
+            <!-- ✏️ REMPLACEZ assets/photo.jpg par votre photo -->
+            <img src="assets/photo.jpg" alt="Photo d'André" id="heroImg">
+            <svg class="hero__avatar-placeholder" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity="0.3" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="hero__avatar-ring" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="hero__scroll" aria-label="Défiler vers le bas">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </a>
+  </section>
+
+
+  <!-- ================================================
+       À PROPOS
+  ================================================ -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">01 — À propos</span>
+        <h2 class="section__title">Qui suis-je ?</h2>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__photo reveal">
+          <div class="about__photo-frame" id="aboutPhotoFrame">
+            <!-- ✏️ Même photo que le hero, ou une autre -->
+            <img src="assets/photo.jpg" alt="André" onerror="document.getElementById('aboutPhotoFrame').classList.add('no-img')">
+            <div class="about__photo-fallback" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity="0.4"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__content reveal">
+          <!-- ✏️ REMPLACEZ tout ce bloc -->
+          <h3 class="about__subtitle">Développeur Full Stack <span class="gradient-text">&amp; créatif</span></h3>
+          <p class="about__text">
+            Passionné par l'intersection entre technologie et design, je crée des applications web performantes et élégantes. Avec X ans d'expérience, j'ai travaillé sur des projets allant des startups innovantes aux grandes entreprises.
+          </p>
+          <p class="about__text">
+            Mon approche ? Un code propre, une architecture solide, et une attention obsessionnelle aux détails qui font la différence. Je crois que le meilleur code est celui que les autres peuvent lire — et apprécier.
+          </p>
+
+          <!-- ✏️ REMPLACEZ les highlights -->
+          <div class="about__highlights">
+            <div class="about__highlight"><span class="about__hl-icon">📍</span><span>Paris, France</span></div>
+            <div class="about__highlight"><span class="about__hl-icon">🎓</span><span>Master Informatique</span></div>
+            <div class="about__highlight"><span class="about__hl-icon">💼</span><span>Disponible pour freelance</span></div>
+            <div class="about__highlight"><span class="about__hl-icon">🌍</span><span>Français &amp; Anglais</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       COMPÉTENCES
+  ================================================ -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">02 — Compétences</span>
+        <h2 class="section__title">Mon arsenal</h2>
+      </div>
+
+      <!-- ✏️ Niveaux : expert / advanced / intermediate / beginner -->
+      <div class="skills__grid">
+
+        <div class="skills__category reveal">
+          <h3 class="skills__cat-title"><span aria-hidden="true">🎨</span> Frontend</h3>
+          <div class="skills__tags">
+            <span class="skill-tag skill-tag--expert">React</span>
+            <span class="skill-tag skill-tag--expert">TypeScript</span>
+            <span class="skill-tag skill-tag--expert">HTML / CSS</span>
+            <span class="skill-tag skill-tag--advanced">Next.js</span>
+            <span class="skill-tag skill-tag--advanced">Vue.js</span>
+            <span class="skill-tag skill-tag--advanced">Tailwind CSS</span>
+            <span class="skill-tag skill-tag--intermediate">Three.js</span>
+            <span class="skill-tag skill-tag--intermediate">Framer Motion</span>
+          </div>
+        </div>
+
+        <div class="skills__category reveal">
+          <h3 class="skills__cat-title"><span aria-hidden="true">⚙️</span> Backend</h3>
+          <div class="skills__tags">
+            <span class="skill-tag skill-tag--expert">Node.js</span>
+            <span class="skill-tag skill-tag--expert">Python</span>
+            <span class="skill-tag skill-tag--advanced">Express</span>
+            <span class="skill-tag skill-tag--advanced">PostgreSQL</span>
+            <span class="skill-tag skill-tag--advanced">MongoDB</span>
+            <span class="skill-tag skill-tag--intermediate">GraphQL</span>
+            <span class="skill-tag skill-tag--intermediate">Redis</span>
+            <span class="skill-tag skill-tag--intermediate">FastAPI</span>
+          </div>
+        </div>
+
+        <div class="skills__category reveal">
+          <h3 class="skills__cat-title"><span aria-hidden="true">🚀</span> DevOps &amp; Outils</h3>
+          <div class="skills__tags">
+            <span class="skill-tag skill-tag--advanced">Docker</span>
+            <span class="skill-tag skill-tag--advanced">Git / GitHub</span>
+            <span class="skill-tag skill-tag--advanced">CI/CD</span>
+            <span class="skill-tag skill-tag--intermediate">AWS</span>
+            <span class="skill-tag skill-tag--intermediate">Vercel</span>
+            <span class="skill-tag skill-tag--intermediate">Linux</span>
+            <span class="skill-tag skill-tag--beginner">Kubernetes</span>
+            <span class="skill-tag skill-tag--beginner">Terraform</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="skills__legend reveal">
+        <span class="legend-item"><span class="legend-dot legend-dot--expert"></span>Expert</span>
+        <span class="legend-item"><span class="legend-dot legend-dot--advanced"></span>Avancé</span>
+        <span class="legend-item"><span class="legend-dot legend-dot--intermediate"></span>Intermédiaire</span>
+        <span class="legend-item"><span class="legend-dot legend-dot--beginner"></span>Notions</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       EXPÉRIENCES
+  ================================================ -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">03 — Expériences</span>
+        <h2 class="section__title">Mon parcours</h2>
+      </div>
+
+      <!-- ✏️ DUPLIQUEZ / MODIFIEZ chaque .timeline__item -->
+      <div class="timeline">
+
+        <div class="timeline__item reveal">
+          <div class="timeline__marker"><div class="timeline__dot"></div></div>
+          <div class="timeline__card">
+            <div class="timeline__header">
+              <div>
+                <h3 class="timeline__role">Développeur Full Stack Senior</h3>
+                <p class="timeline__company">Entreprise XYZ <span class="timeline__type">· CDI</span></p>
+              </div>
+              <span class="timeline__date">2022 — Présent</span>
+            </div>
+            <ul class="timeline__desc">
+              <li>Architecture et développement d'une plateforme SaaS de gestion de projets (React, Node.js, PostgreSQL)</li>
+              <li>Réduction de 40 % du temps de chargement grâce à l'optimisation des requêtes et du bundle JS</li>
+              <li>Mise en place d'une CI/CD robuste sur AWS avec Docker et GitHub Actions</li>
+              <li>Encadrement d'une équipe de 3 développeurs juniors</li>
+            </ul>
+            <div class="timeline__tech">
+              <span>React</span><span>Node.js</span><span>AWS</span><span>PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__marker"><div class="timeline__dot"></div></div>
+          <div class="timeline__card">
+            <div class="timeline__header">
+              <div>
+                <h3 class="timeline__role">Développeur Frontend</h3>
+                <p class="timeline__company">Agence Créative ABC <span class="timeline__type">· CDI</span></p>
+              </div>
+              <span class="timeline__date">2020 — 2022</span>
+            </div>
+            <ul class="timeline__desc">
+              <li>Développement de sites et applications web pour clients grands comptes (retail, finance, santé)</li>
+              <li>Intégration de designs complexes avec animations avancées (GSAP, Three.js)</li>
+              <li>Migration d'une base de code Angular vers React pour 5 projets clients</li>
+            </ul>
+            <div class="timeline__tech">
+              <span>React</span><span>TypeScript</span><span>GSAP</span><span>Figma</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__marker"><div class="timeline__dot"></div></div>
+          <div class="timeline__card">
+            <div class="timeline__header">
+              <div>
+                <h3 class="timeline__role">Développeur Web Junior</h3>
+                <p class="timeline__company">Startup TechStart <span class="timeline__type">· Stage → CDI</span></p>
+              </div>
+              <span class="timeline__date">2018 — 2020</span>
+            </div>
+            <ul class="timeline__desc">
+              <li>Développement de fonctionnalités full stack sur une application e-commerce</li>
+              <li>Conception et intégration d'une API REST avec Express et MongoDB</li>
+              <li>Contribution active aux sprints Agile/Scrum en équipe de 8 personnes</li>
+            </ul>
+            <div class="timeline__tech">
+              <span>Vue.js</span><span>Node.js</span><span>MongoDB</span><span>Docker</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       FORMATION
+  ================================================ -->
+  <section class="section education" id="education">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">04 — Formation</span>
+        <h2 class="section__title">Mes diplômes</h2>
+      </div>
+
+      <!-- ✏️ DUPLIQUEZ / MODIFIEZ chaque .edu-card -->
+      <div class="education__grid">
+
+        <div class="edu-card reveal">
+          <div class="edu-card__icon" aria-hidden="true">🎓</div>
+          <div class="edu-card__body">
+            <span class="edu-card__date">2018</span>
+            <h3 class="edu-card__degree">Master en Informatique</h3>
+            <p class="edu-card__school">Université Paris-Saclay</p>
+            <p class="edu-card__desc">Spécialisation en systèmes distribués et développement web. Mention Très Bien.</p>
+          </div>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-card__icon" aria-hidden="true">📜</div>
+          <div class="edu-card__body">
+            <span class="edu-card__date">2016</span>
+            <h3 class="edu-card__degree">Licence Informatique</h3>
+            <p class="edu-card__school">Université Paris Cité</p>
+            <p class="edu-card__desc">Fondamentaux de l'algorithmique, bases de données et développement logiciel.</p>
+          </div>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-card__icon" aria-hidden="true">🏅</div>
+          <div class="edu-card__body">
+            <span class="edu-card__date">2023</span>
+            <h3 class="edu-card__degree">AWS Solutions Architect</h3>
+            <p class="edu-card__school">Amazon Web Services</p>
+            <p class="edu-card__desc">Certification Associate — Architecture de solutions cloud scalables et résilientes.</p>
+          </div>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-card__icon" aria-hidden="true">🏅</div>
+          <div class="edu-card__body">
+            <span class="edu-card__date">2022</span>
+            <h3 class="edu-card__degree">Professional Scrum Master I</h3>
+            <p class="edu-card__school">Scrum.org</p>
+            <p class="edu-card__desc">Certification PSM I — Méthodes agiles et gestion de projet Scrum.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       PROJETS
+  ================================================ -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">05 — Projets</span>
+        <h2 class="section__title">Ce que j'ai construit</h2>
+      </div>
+
+      <!-- ✏️ DUPLIQUEZ / MODIFIEZ chaque .project-card -->
+      <div class="projects__grid">
+
+        <article class="project-card reveal">
+          <div class="project-card__header">
+            <span class="project-card__emoji" aria-hidden="true">🚀</span>
+            <div class="project-card__links">
+              <a href="https://github.com/votre-repo" target="_blank" rel="noopener" aria-label="Voir sur GitHub" class="project-card__link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="https://demo.exemple.com" target="_blank" rel="noopener" aria-label="Voir la démo" class="project-card__link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-card__title">Plateforme SaaS Analytics</h3>
+          <p class="project-card__desc">Dashboard de visualisation de données en temps réel pour équipes marketing. Intégration avec +20 sources de données, exports automatisés.</p>
+          <div class="project-card__tech">
+            <span>React</span><span>D3.js</span><span>Node.js</span><span>PostgreSQL</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card__header">
+            <span class="project-card__emoji" aria-hidden="true">🛍️</span>
+            <div class="project-card__links">
+              <a href="https://github.com" target="_blank" rel="noopener" aria-label="Voir sur GitHub" class="project-card__link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="https://demo.exemple.com" target="_blank" rel="noopener" aria-label="Voir la démo" class="project-card__link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-card__title">E-commerce Mobile-First</h3>
+          <p class="project-card__desc">Application e-commerce complète avec panier, paiement Stripe, gestion des stocks et tableau de bord vendeur. +500 utilisateurs actifs.</p>
+          <div class="project-card__tech">
+            <span>Next.js</span><span>TypeScript</span><span>Stripe</span><span>MongoDB</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card__header">
+            <span class="project-card__emoji" aria-hidden="true">🤖</span>
+            <div class="project-card__links">
+              <a href="https://github.com" target="_blank" rel="noopener" aria-label="Voir sur GitHub" class="project-card__link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-card__title">Assistant IA Documentaire</h3>
+          <p class="project-card__desc">Outil d'analyse et synthèse de documents PDF via LLM. Interface conversationnelle, extraction de données structurées, export JSON/CSV.</p>
+          <div class="project-card__tech">
+            <span>Python</span><span>FastAPI</span><span>OpenAI</span><span>React</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card__header">
+            <span class="project-card__emoji" aria-hidden="true">📊</span>
+            <div class="project-card__links">
+              <a href="https://github.com" target="_blank" rel="noopener" aria-label="Voir sur GitHub" class="project-card__link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="https://demo.exemple.com" target="_blank" rel="noopener" aria-label="Voir la démo" class="project-card__link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-card__title">App Gestion Budgétaire</h3>
+          <p class="project-card__desc">PWA de suivi des finances personnelles. Catégorisation automatique des dépenses, graphiques interactifs, alertes personnalisables.</p>
+          <div class="project-card__tech">
+            <span>Vue.js</span><span>Chart.js</span><span>Firebase</span><span>PWA</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card__header">
+            <span class="project-card__emoji" aria-hidden="true">🎮</span>
+            <div class="project-card__links">
+              <a href="https://github.com" target="_blank" rel="noopener" aria-label="Voir sur GitHub" class="project-card__link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-card__title">Jeu 2D Multijoueur</h3>
+          <p class="project-card__desc">Jeu de stratégie temps réel en navigateur avec matchmaking, lobbies et leaderboard global. Architecture WebSocket pour la synchro en temps réel.</p>
+          <div class="project-card__tech">
+            <span>Canvas API</span><span>Socket.io</span><span>Node.js</span><span>Redis</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card__header">
+            <span class="project-card__emoji" aria-hidden="true">📱</span>
+            <div class="project-card__links">
+              <a href="https://github.com" target="_blank" rel="noopener" aria-label="Voir sur GitHub" class="project-card__link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="https://demo.exemple.com" target="_blank" rel="noopener" aria-label="Voir la démo" class="project-card__link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-card__title">App Mobile React Native</h3>
+          <p class="project-card__desc">Application de méditation guidée avec sessions audio, suivi de progression, rappels personnalisables et communauté utilisateurs.</p>
+          <div class="project-card__tech">
+            <span>React Native</span><span>Expo</span><span>Supabase</span><span>Audio API</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       CONTACT
+  ================================================ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">06 — Contact</span>
+        <h2 class="section__title">Travaillons ensemble</h2>
+      </div>
+
+      <div class="contact__grid">
+        <div class="contact__info reveal">
+          <!-- ✏️ REMPLACEZ ce texte -->
+          <p class="contact__intro">
+            Vous avez un projet en tête ? Une idée à concrétiser ? Ou juste envie d'échanger ? N'hésitez pas — je réponds généralement sous 24 h.
+          </p>
+
+          <!-- ✏️ REMPLACEZ les URLs / emails -->
+          <div class="contact__details">
+            <a href="mailto:votre@email.com" class="contact__detail">
+              <span class="contact__detail-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </span>
+              votre@email.com
+            </a>
+            <a href="https://linkedin.com/in/votre-profil" target="_blank" rel="noopener" class="contact__detail">
+              <span class="contact__detail-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </span>
+              LinkedIn
+            </a>
+            <a href="https://github.com/votre-profil" target="_blank" rel="noopener" class="contact__detail">
+              <span class="contact__detail-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </span>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- ✏️ Pour un vrai envoi d'email : intégrez Formspree (action="https://formspree.io/f/VOTRE_ID") ou EmailJS -->
+        <form class="contact__form reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name" class="form-label">Nom complet</label>
+            <input type="text" id="name" name="name" class="form-input" placeholder="Jean Dupont" required>
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="jean@exemple.com" required>
+          </div>
+          <div class="form-group">
+            <label for="subject" class="form-label">Sujet</label>
+            <input type="text" id="subject" name="subject" class="form-input" placeholder="Projet freelance, collaboration...">
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+            Envoyer le message
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <div class="form-success" id="formSuccess" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Message envoyé ! Je vous répondrai sous peu.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       FOOTER
+  ================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <p class="footer__name">André <span class="gradient-text">[Votre Nom]</span></p>
+        <p class="footer__copy">Conçu &amp; développé avec ♥ — 2025</p>
+        <a href="#hero" class="footer__back">
+          Retour en haut
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
