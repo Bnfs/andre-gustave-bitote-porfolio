@@ -81,7 +81,12 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
    ============================================================ */
 const typedEl  = document.getElementById('typed');
 // ✏️ REMPLACEZ ces rôles par les vôtres
-const roles    = ['Développeur Full Stack', 'Architecte Frontend', 'Passionné d\'IA', 'Créateur d\'expériences'];
+const roles    = [
+  'Ingénieur Réseaux', 
+  'Expert Cybersécurité', 
+  'Spécialiste SIEM/SOC', 
+  'Architecte Infrastructure'
+];
 let roleIndex  = 0;
 let charIndex  = 0;
 let deleting   = false;

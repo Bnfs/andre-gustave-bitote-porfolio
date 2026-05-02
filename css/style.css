@@ -778,6 +778,55 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* ============================================================
+   CERTIFICATIONS (sous la formation)
+   ============================================================ */
+.certs {
+  margin-top: 48px;
+  padding-top: 48px;
+  border-top: 1px solid var(--border);
+}
+.certs__title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.certs__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+.cert-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 20px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  min-width: 130px;
+  text-align: center;
+  transition: all var(--t) var(--ease);
+}
+.cert-badge:hover {
+  border-color: var(--border-hov);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-4px);
+}
+.cert-badge__icon { font-size: 1.8rem; line-height: 1; }
+.cert-badge__name { font-family: 'Syne', sans-serif; font-size: 0.88rem; font-weight: 700; }
+.cert-badge__org  { font-size: 0.74rem; color: var(--accent-2); font-weight: 500; }
+
+.cert-badge--inprogress {
+  border-style: dashed;
+  opacity: 0.75;
+}
+.cert-badge--inprogress .cert-badge__org { color: var(--txt-3); }
+
+/* ============================================================
    FOOTER
    ============================================================ */
 .footer {

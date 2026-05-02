@@ -1,102 +1,110 @@
-# Portfolio Personnel — André
+# Andre Gustave Bitote — Portfolio
 
-Site portfolio statique, hébergeable sur GitHub Pages ou Netlify. Aucune dépendance à installer.
+Portfolio personnel statique d'Andre Gustave Bitote, étudiant ingénieur en **Sécurité et Qualité des Réseaux** à Polytech Dijon. En recherche d'un contrat de professionnalisation à partir de **septembre 2026**.
 
-## Structure
+🔗 **Live** : [bnfs.github.io/andre-gustave-bitote-porfolio](https://bnfs.github.io/andre-gustave-bitote-porfolio)
+
+---
+
+## Contenu du site
+
+| Section | Contenu |
+|---------|---------|
+| **Hero** | Nom, effet typewriter (Ingénieur Réseaux / Expert Cybersécurité…), stats animées, liens CV/LinkedIn |
+| **À propos** | Profil, photo, disponibilité alternance sept. 2026 |
+| **Compétences** | Réseaux & Infrastructure · Cybersécurité · Systèmes, Cloud & Dev — tags par niveau |
+| **Expériences** | CENADI (2025) · Embolo Sarl (2024) · Ministère Communication (2023) |
+| **Formation** | Polytech Dijon · ENSP Yaoundé · Université Yaoundé 1 + badges certifications |
+| **Projets** | SIEM/XDR Wazuh · Infrastructure multi-protocoles · Active Directory |
+| **Contact** | Formulaire + email, téléphone, LinkedIn, GitHub |
+
+---
+
+## Structure des fichiers
 
 ```
 portfolio/
-├── index.html        # Page unique (toutes les sections)
+├── index.html          # Page unique — toutes les sections
 ├── css/
-│   └── style.css     # CSS custom — variables, layout, animations
+│   └── style.css       # CSS custom — variables, layout, animations
 ├── js/
-│   └── main.js       # Vanilla JS — scroll reveal, typewriter, thème, formulaire
-└── assets/
-    ├── photo.jpg     # Votre photo (à ajouter)
-    └── cv.pdf        # Votre CV PDF (à ajouter)
+│   └── main.js         # Vanilla JS — scroll reveal, typewriter, thème, formulaire
+├── assets/
+│   ├── photo.jpg       # Photo de profil (à ajouter)
+│   └── cv.pdf          # CV PDF téléchargeable (à ajouter)
+└── README.md
 ```
 
-## Personnalisation
+---
 
-Recherchez le commentaire `✏️` dans `index.html` et `js/main.js` pour trouver chaque zone à modifier.
+## Technologies
 
-### Informations essentielles
+- **HTML / CSS / JS vanilla** — aucune dépendance npm
+- **Google Fonts** : Syne (titres) + Space Grotesk (corps)
+- **Animations** : CSS keyframes + `IntersectionObserver` (scroll reveal)
+- **Thème** : dark (défaut) / light — persisté en `localStorage`
+- **Responsive** : mobile-first, breakpoints 1024 px et 768 px
 
-| Quoi | Où |
-|------|----|
-| Nom & titre | `index.html` — section Hero, `[Votre Nom]` |
-| Accroche | `index.html` — `.hero__tagline` |
-| Photo | Remplacez `assets/photo.jpg` |
-| CV PDF | Remplacez `assets/cv.pdf` |
-| Email | `index.html` — section Contact, `href="mailto:..."` |
-| LinkedIn | `index.html` — Hero + Contact |
-| GitHub | `index.html` — Contact |
-| Rôles typewriter | `js/main.js` — tableau `roles` (~ligne 40) |
-| Compteurs stats | `index.html` — attributs `data-target` dans `.hero__stat-num` |
+---
 
-### Sections à remplir avec vos données réelles
+## Coordonnées
 
-- **À propos** — `.about__text` et `.about__highlights`
-- **Compétences** — chaque `.skills__category` avec vos propres tags
-- **Expériences** — chaque `.timeline__item` (rôle, entreprise, dates, missions)
-- **Formation** — chaque `.edu-card` (diplôme, école, année)
-- **Projets** — chaque `.project-card` (titre, description, technos, liens GitHub/démo)
+| | |
+|-|-|
+| **Email** | andre-gustave_bitote@etu.ubourgogne.fr |
+| **Téléphone** | +33 06 56 89 01 26 |
+| **LinkedIn** | [Andre Gustave Bitote](https://www.linkedin.com/in/andre-gustave-bitote-9b2927385) |
+| **GitHub** | [github.com/Bnfs](https://github.com/Bnfs) |
+| **Localisation** | 94 Bd Mansart, Dijon 21000 |
 
-### Niveaux de compétence disponibles
+---
 
-```html
-<span class="skill-tag skill-tag--expert">Nom</span>
-<span class="skill-tag skill-tag--advanced">Nom</span>
-<span class="skill-tag skill-tag--intermediate">Nom</span>
-<span class="skill-tag skill-tag--beginner">Nom</span>
-```
+## Certifications
 
-### Couleurs & typographie
+| Certification | Organisme | Statut |
+|---------------|-----------|--------|
+| CCNA 1 | Cisco | ✅ Obtenue |
+| CCNA 2 | Cisco | ✅ Obtenue |
+| CCNA 3 | Cisco | ✅ Obtenue |
+| CyberOps Associate | Cisco | ✅ Obtenue |
+| NSE 1 · 2 · 3 | Fortinet | ✅ Obtenues |
+| CCNP | Cisco | ⏳ En cours |
 
-Tout est centralisé dans les variables CSS au début de `css/style.css` :
-
-```css
---accent:   #7c3aed;   /* Violet — couleur principale */
---accent-2: #06b6d4;   /* Cyan — couleur secondaire  */
---gradient: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%);
-```
-
-Pour changer la palette, modifiez uniquement ces variables.
-
-### Formulaire de contact
-
-Le formulaire simule l'envoi par défaut. Pour l'activer réellement :
-
-**Option Formspree (recommandée, gratuit) :**
-1. Créez un compte sur [formspree.io](https://formspree.io)
-2. Créez un formulaire et copiez l'ID
-3. Dans `index.html`, ajoutez sur la balise `<form>` :
-   ```html
-   action="https://formspree.io/f/VOTRE_ID" method="POST"
-   ```
-4. Retirez le `e.preventDefault()` dans `js/main.js`
+---
 
 ## Déploiement
 
-### GitHub Pages
+### GitHub Pages (actuel)
 
 ```bash
-git init
 git add .
-git commit -m "Initial portfolio"
-git remote add origin https://github.com/VOTRE_USER/VOTRE_REPO.git
-git push -u origin main
+git commit -m "Mise à jour"
+git push
 ```
-Activez GitHub Pages dans Settings → Pages → Branch: `main`.
 
-### Netlify
+Activez GitHub Pages dans **Settings → Pages → Branch: main → / (root)**.
 
-Glissez-déposez le dossier `portfolio/` sur [app.netlify.com/drop](https://app.netlify.com/drop).
+### Netlify (alternative)
 
-## Design
+Glissez-déposez le dossier sur [app.netlify.com/drop](https://app.netlify.com/drop).
 
-- **Typographies** : [Syne](https://fonts.google.com/specimen/Syne) (titres) + [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) (corps) via Google Fonts
-- **Thème** : sombre par défaut, clair disponible — persisté en `localStorage`
-- **Animations** : CSS keyframes + `IntersectionObserver` (scroll reveal)
-- **Responsive** : mobile-first, breakpoints à 1024 px et 768 px
-- **Pas de framework** : CSS custom uniquement, aucune dépendance npm
+---
+
+## Activer le formulaire de contact
+
+Par défaut le formulaire simule l'envoi. Pour l'activer avec **Formspree** (gratuit) :
+
+1. Créez un compte sur [formspree.io](https://formspree.io) et obtenez un ID de formulaire
+2. Dans `index.html`, modifiez la balise `<form>` :
+   ```html
+   <form action="https://formspree.io/f/VOTRE_ID" method="POST" ...>
+   ```
+3. Dans `js/main.js`, supprimez le `e.preventDefault()` dans le listener `submit`
+
+---
+
+## Personnalisation rapide
+
+Cherchez `✏️` dans `index.html` pour trouver les seuls points encore à vérifier :
+- URL LinkedIn (déjà mise à jour : `linkedin.com/in/andre-gustave-bitote-9b2927385`)
+- Déposer `assets/photo.jpg` et `assets/cv.pdf`
