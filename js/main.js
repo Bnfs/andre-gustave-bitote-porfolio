@@ -157,12 +157,11 @@ const formSuccess = document.getElementById('formSuccess');
 const submitBtn   = document.getElementById('submitBtn');
 
 if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     if (!contactForm.checkValidity()) { contactForm.reportValidity(); return; }
 
-    // État de chargement
-    const origHTML   = submitBtn.innerHTML;
+    const origHTML = submitBtn.innerHTML;
     submitBtn.disabled = true;
     submitBtn.innerHTML = `
       <svg style="animation:spin .8s linear infinite" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -170,14 +169,26 @@ if (contactForm) {
       </svg>
       Envoi en cours…`;
 
-    // Simulation d'envoi (remplacez par votre intégration réelle)
-    setTimeout(() => {
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        formSuccess.hidden = false;
+        contactForm.reset();
+        setTimeout(() => { formSuccess.hidden = true; }, 6000);
+      } else {
+        alert('Une erreur est survenue. Veuillez réessayer ou m\'écrire directement par email.');
+      }
+    } catch {
+      alert('Impossible d\'envoyer le message. Vérifiez votre connexion.');
+    } finally {
       submitBtn.disabled = false;
       submitBtn.innerHTML = origHTML;
-      formSuccess.hidden = false;
-      contactForm.reset();
-      setTimeout(() => { formSuccess.hidden = true; }, 6000);
-    }, 1500);
+    }
   });
 }
 
