@@ -1,0 +1,30 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+
+    # Empêche le sniffing du type MIME (-5 corrigé)
+    X-Content-Type-Options = "nosniff"
+
+    # Empêche l'intégration dans des iframes — clickjacking (-20 corrigé)
+    X-Frame-Options = "DENY"
+
+    # Contrôle les infos envoyées dans le Referer
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+    # Désactive caméra, micro, géolocalisation
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+    # Cross-Origin Resource Policy
+    Cross-Origin-Resource-Policy = "same-origin"
+
+    # Cross-Origin Opener Policy
+    Cross-Origin-Opener-Policy = "same-origin"
+
+    # Content Security Policy (-25 corrigé)
+    # - script-src 'self'           : seul main.js est autorisé
+    # - style-src unsafe-inline     : nécessaire pour les styles injectés par JS
+    # - font-src fonts.gstatic.com  : Google Fonts
+    # - connect-src formspree.io    : envoi du formulaire contact
+    # - frame-ancestors 'none'      : bloque les iframes
+    # - form-action formspree.io    : envoi autorisé vers Formspree uniquement
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://formspree.io;"
