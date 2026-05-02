@@ -82,10 +82,10 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 const typedEl  = document.getElementById('typed');
 // ✏️ REMPLACEZ ces rôles par les vôtres
 const roles    = [
-  'Ingénieur Réseaux', 
-  'Expert Cybersécurité', 
-  'Spécialiste SIEM/SOC', 
-  'Architecte Infrastructure'
+  'en Réseaux & Sécurité',
+  'en Cybersécurité / SOC',
+  'en Administration Systèmes',
+  'en alternance dès sept. 2026'
 ];
 let roleIndex  = 0;
 let charIndex  = 0;
