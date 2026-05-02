@@ -431,7 +431,12 @@
             </div>
           </div>
           <h3 class="project-card__title">Solution SIEM/XDR avec Wazuh</h3>
-          <p class="project-card__desc">Déploiement d'un cluster Wazuh pour le monitoring de serveurs hybrides Linux/Windows. Création de règles de détection basées sur le framework MITRE ATT&amp;CK et automatisation de la réponse via TheHive/Cortex.</p>
+          <ul class="project-card__list">
+            <li>Déploiement d'un cluster Wazuh pour le monitoring de serveurs hybrides Linux/Windows</li>
+            <li>Création de règles de détection personnalisées basées sur le framework MITRE ATT&amp;CK</li>
+            <li>Automatisation de la réponse aux incidents via l'intégration TheHive/Cortex</li>
+            <li>Mise en place de tableaux de bord de supervision et d'alertes en temps réel</li>
+          </ul>
           <div class="project-card__tech">
             <span>Wazuh</span><span>TheHive</span><span>Cortex</span><span>MITRE ATT&amp;CK</span><span>Linux</span>
           </div>
@@ -447,7 +452,12 @@
             </div>
           </div>
           <h3 class="project-card__title">Infrastructure Réseau Multi-protocoles</h3>
-          <p class="project-card__desc">Implémentation d'une infrastructure réseau haute disponibilité avec redondance (STP, HSRP, EtherChannel). Configuration du routage dynamique BGP et gestion centralisée des flux via VLAN/VTP.</p>
+          <ul class="project-card__list">
+            <li>Conception d'une topologie réseau haute disponibilité avec redondance de liens</li>
+            <li>Implémentation de STP, HSRP et EtherChannel pour la tolérance aux pannes</li>
+            <li>Configuration du routage dynamique BGP inter-AS et OSPF intra-domaine</li>
+            <li>Gestion centralisée des VLANs via VTP et application de politiques QoS</li>
+          </ul>
           <div class="project-card__tech">
             <span>BGP</span><span>OSPF</span><span>HSRP</span><span>EtherChannel</span><span>VTP</span><span>Cisco</span>
           </div>
@@ -462,9 +472,14 @@
               </div>
             </div>
             <h3 class="project-card__title">Infrastructure Active Directory</h3>
-            <p class="project-card__desc">Installation de contrôleurs de domaine redondants avec DNS/DHCP et stratégies de groupe (GPO) de sécurité. Administration des OU, utilisateurs et groupes. Intégration de postes Windows 11 et Linux via SSSD.</p>
+            <ul class="project-card__list">
+              <li>Installation de contrôleurs de domaine redondants (Primary/Backup DC)</li>
+              <li>Déploiement des services DNS, DHCP et stratégies de groupe (GPO) de sécurité</li>
+              <li>Administration des unités d'organisation (OU), utilisateurs et groupes</li>
+              <li>Intégration de postes Windows 11 et Linux au domaine via SSSD/PAM</li>
+            </ul>
             <div class="project-card__tech">
-              <span>Windows Server</span><span>Active Directory</span><span>DNS/DHCP</span><span>SSSD</span><span>Linux</span>
+              <span>Windows Server</span><span>Active Directory</span><span>DNS/DHCP</span><span>GPO</span><span>SSSD</span>
             </div>
           </article>
 
@@ -478,7 +493,12 @@
       </div>
     </div>
     <h3 class="project-card__title">PolyHome — Application Domotique</h3>
-    <p class="project-card__desc">Développement d'une application Android native pour le contrôle d'objets connectés. Gestion en temps réel de l'éclairage et des capteurs via API REST et protocoles domotiques.</p>
+    <ul class="project-card__list">
+      <li>Développement d'une application Android native de contrôle d'objets connectés</li>
+      <li>Gestion en temps réel de l'éclairage et des capteurs via API REST</li>
+      <li>Conception de l'interface avec Material Design et navigation intuitive</li>
+      <li>Intégration de protocoles domotiques pour la communication avec les équipements</li>
+    </ul>
     <div class="project-card__tech">
       <span>Kotlin</span><span>Android SDK</span><span>Retrofit</span><span>IoT</span><span>API REST</span>
     </div>
@@ -494,11 +514,39 @@
       </div>
     </div>
     <h3 class="project-card__title">My Pizza — Application iOS</h3>
-    <p class="project-card__desc">Application de commande de pizzas développée nativement pour iOS. Mise en œuvre d'une interface fluide avec SwiftUI, gestion du panier et catalogue de produits dynamique.</p>
+    <ul class="project-card__list">
+      <li>Développement natif iOS d'une application de commande de pizzas</li>
+      <li>Conception de l'interface avec SwiftUI — navigation fluide et animations</li>
+      <li>Gestion du panier, catalogue produits dynamique et historique des commandes</li>
+      <li>Maquettage et prototypage sur Figma avant développement</li>
+    </ul>
     <div class="project-card__tech">
-      <span>Swift</span><span>SwiftUI</span><span>Xcode</span><span>Mobile Design</span>
+      <span>Swift</span><span>SwiftUI</span><span>Xcode</span><span>Figma</span><span>Mobile Design</span>
     </div>
   </article>
+        <article class="project-card reveal">
+          <div class="project-card__header">
+            <span class="project-card__emoji" aria-hidden="true">🛣️</span>
+            <div class="project-card__links">
+              <a href="https://github.com/Bnfs" target="_blank" rel="noopener" aria-label="Voir sur GitHub" class="project-card__link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-card__title">Plateforme de Gestion — Fonds Routier</h3>
+          <ul class="project-card__list">
+            <li>Conception et développement d'une plateforme web de gestion et suivi des recommandations d'audit du Fonds Routier</li>
+            <li>Modélisation de la base de données (recommandations, statuts, responsables, délais de mise en œuvre)</li>
+            <li>Tableau de bord avec indicateurs d'avancement : taux de réalisation, recommandations en retard, alertes</li>
+            <li>Système de notifications automatiques pour les recommandations à échéance imminente</li>
+            <li>Gestion des accès par rôle (administrateur, auditeur, responsable métier)</li>
+            <li>Génération de rapports d'avancement exportables (PDF / Excel)</li>
+          </ul>
+          <div class="project-card__tech">
+            <span>Django</span><span>Python</span><span>PostgreSQL</span><span>JavaScript</span><span>HTML/CSS</span>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>

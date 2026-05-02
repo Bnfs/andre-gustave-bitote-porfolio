@@ -698,6 +698,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .project-card__title { font-family: 'Syne', sans-serif; font-size: 1.08rem; font-weight: 700; margin-bottom: 10px; line-height: 1.3; }
 .project-card__desc  { color: var(--txt-2); font-size: 0.87rem; line-height: 1.65; flex: 1; margin-bottom: 20px; }
+.project-card__list {
+  color: var(--txt-2); font-size: 0.84rem; line-height: 1.6;
+  display: flex; flex-direction: column; gap: 6px;
+  flex: 1; margin-bottom: 18px;
+}
+.project-card__list li { padding-left: 16px; position: relative; }
+.project-card__list li::before { content: '▸'; position: absolute; left: 0; color: var(--accent); font-size: 0.7rem; top: 3px; }
+
 .project-card__tech  { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
 .project-card__tech span {
   padding: 3px 10px;
